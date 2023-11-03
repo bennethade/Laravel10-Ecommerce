@@ -22,7 +22,7 @@
     <meta name="author" content="Surfside Media">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <title>SurfsideMedia</title>
+    <title>Benjas Tech</title>
 
     <link id="rtl-link" rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/vendors/ion.rangeSlider.min.css') }}">
@@ -117,7 +117,7 @@
                             <div class="menu-left">
                                 <div class="brand-logo">
                                     <a href="{{ route('app.index') }}">
-                                        <img src="assets/images/logo.png" class="h-logo img-fluid blur-up lazyload"
+                                        <img src="{{ asset('assets/images/logo.png') }}" class="h-logo img-fluid blur-up lazyload"
                                             alt="logo">
                                     </a>
                                 </div>
@@ -139,7 +139,7 @@
                                             </li>
                                             <li><a href="{{ route('app.index') }}" class="nav-link menu-title">Home</a></li>
                                             <li><a href="{{ route('shop.index') }}" class="nav-link menu-title">Shop</a></li>
-                                            <li><a href="cart/list.html" class="nav-link menu-title">Cart</a></li>
+                                            <li><a href="{{ route('cart.index') }}" class="nav-link menu-title">Cart</a></li>
                                             <li><a href="about-us.html" class="nav-link menu-title">About Us</a></li>
                                             <li><a href="contact-us.html" class="nav-link menu-title">Contact Us</a>
                                             </li>
@@ -167,10 +167,10 @@
                                     </li>
                                     <li class="onhover-dropdown wislist-dropdown">
                                         <div class="cart-media">
-                                            <a href="cart/list.html">
+                                            <a href="{{ route('cart.index') }}">
                                                 <i data-feather="shopping-cart"></i>
                                                 <span id="cart-count" class="label label-theme rounded-pill">
-                                                    0
+                                                    {{ Cart::instance('cart')->content()->count() }}
                                                 </span>
                                             </a>
                                         </div>
@@ -291,14 +291,13 @@
                             </div>
                             <ul class="contact-lists" style="clear:both;">
                                 <li>
-                                    <span><b>phone:</b> <span class="font-light"> +1 0000000000</span></span>
+                                    <span><b>phone:</b> <span class="font-light"> +234 816 136 1060</span></span>
                                 </li>
                                 <li>
-                                    <span><b>Address:</b><span class="font-light"> NIT, Faridabad, Haryana,
-                                            India</span></span>
+                                    <span><b>Address:</b><span class="font-light">Wuse II, Abuja FCT</span></span>
                                 </li>
                                 <li>
-                                    <span><b>Email:</b><span class="font-light"> contact@surfsidemedia.in</span></span>
+                                    <span><b>Email:</b><span class="font-light"> support@benjastech.com</span></span>
                                 </li>
                             </ul>
                         </div>
@@ -332,7 +331,7 @@
                     <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                         <div class="footer-links">
                             <div class="footer-title">
-                                <h3>New Categories</h3>
+                                <h3>Categories</h3>
                             </div>
                             <div class="footer-content">
                                 <ul>
@@ -431,7 +430,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <p class="mb-0 font-dark">© 2023, Surfside Media.</p>
+                        <p class="mb-0 font-dark">© 2023, Benjas Technologies.</p>
                     </div>
                 </div>
             </div>
